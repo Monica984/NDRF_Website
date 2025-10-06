@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>NDRF_Website</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="NDRF_Website" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://monica984.github.io/NDRF_Website/" />
+<meta property="og:url" content="https://monica984.github.io/NDRF_Website/" />
+<meta property="og:site_name" content="NDRF_Website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="NDRF_Website" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"NDRF_Website","name":"NDRF_Website","url":"https://monica984.github.io/NDRF_Website/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/NDRF_Website/assets/css/style.css?v=a025712a231cc868f7c677c02c36893c1731066e">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/NDRF_Website/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://monica984.github.io/NDRF_Website/">NDRF_Website</a></h1>
+      
+
+      <!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NDRF — Interactive Guide</title>
+  <meta name="description" content="Interactive, single‑file website about India's National Disaster Response Force (NDRF): mission, preparedness tips, a battalion locator, and a quiz." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;           /* slate-900 */
+      --panel: #111827;        /* gray-900 */
+      --muted: #94a3b8;        /* slate-400 */
+      --text: #e5e7eb;         /* gray-200 */
+      --brand: #f97316;        /* orange-500 */
+      --brand-2: #2563eb;      /* blue-600 */
+      --ring: rgba(37, 99, 235, 0.35);
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+      --card: #0b1220;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    [data-theme="light"] {
+      --bg: #f8fafc;           /* slate-50 */
+      --panel: #ffffff;        /* white */
+      --muted: #64748b;        /* slate-500 */
+      --text: #0f172a;         /* slate-900 */
+      --brand: #ef6c00;        /* orange */
+      --brand-2: #1d4ed8;      /* blue */
+      --ring: rgba(29, 78, 216, .25);
+      --card: #ffffff;
+      --shadow: 0 12px 24px rgba(2,6,23,.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -20%, rgba(37,99,235,.08), transparent 60%),
+                  radial-gradient(900px 500px at -10% 10%, rgba(249,115,22,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+    }
+
+    /* Layout */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--muted) 20%, transparent);
+      z-index: 50;
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    nav .brand { display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.2px; }
+    .logo {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: conic-gradient(from 0deg, var(--brand), var(--brand-2));
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.08), var(--shadow);
+    }
+    .navlinks { display:flex; gap:14px; flex-wrap: wrap; }
+    .navlinks a { text-decoration:none; color: var(--text); opacity:.8; padding:8px 12px; border-radius: 10px; }
+    .navlinks a:hover, .navlinks a:focus { outline:none; opacity:1; background: color-mix(in oklab, var(--panel) 88%, transparent); box-shadow: 0 0 0 2px var(--ring); }
+    .controls { display:flex; gap:8px; align-items:center; }
+    .btn { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#fff; border:none; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; box-shadow: var(--shadow); }
+    .btn:focus { outline: none; box-shadow: 0 0 0 3px var(--ring); }
+
+    /* Hero */
+    .hero { padding: 52px 0 36px; }
+    .hero-inner { display:grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items:center; }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin:0 0 10px; }
+    .hero p { color: var(--muted); margin: 0 0 18px; }
+    .pill {
+      display:inline-flex; gap:8px; align-items:center; font-size: 12px; text-transform: uppercase; letter-spacing:.14em; color:#fff; background: linear-gradient(90deg, var(--brand-2), var(--brand)); padding:8px 12px; border-radius:999px; box-shadow: var(--shadow);
+    }
+    .card {
+      background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 84%, transparent), color-mix(in oklab, var(--panel) 90%, transparent));
+      border: 1px solid color-mix(in oklab, var(--muted) 22%, transparent);
+      border-radius: 16px; padding: 16px; box-shadow: var(--shadow);
+    }
+
+    /* Section headings */
+    section { padding: 56px 0; }
+    h2 { font-size: clamp(22px, 3vw, 32px); margin:0 0 16px; }
+    .sub { color: var(--muted); margin-bottom: 20px; }
+
+    /* About */
+    .grid { display:grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kpi { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .kpi .item { background: var(--card); border:1px solid color-mix(in oklab, var(--muted) 20%, transparent); border-radius:14px; padding:12px; text-align:center; }
+    .kpi .num { font-weight: 800; font-size: 22px; }
+    .kpi .lbl { font-size: 12px; color: var(--muted); }
+
+    /* Map */
+    .map-wrap { display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; }
+    .map { background: var(--card); border:1px solid color-mix(in oklab, var(--muted) 20%, transparent); border-radius: 16px; padding: 10px; position:relative; }
+    .legend { display:flex; gap:8px; flex-wrap:wrap; font-size:12px; color:var(--muted); margin-top:8px; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background: color-mix(in oklab, var(--panel) 86%, transparent); padding:6px 10px; border-radius:999px; border:1px solid color-mix(in oklab, var(--muted) 18%, transparent); }
+    .dot { width:10px; height:10px; border-radius:50%; background: var(--brand-2); box-shadow: 0 0 0 2px rgba(37,99,235,.2); }
+    svg { width:100%; height:auto; display:block; }
+    .marker { cursor:pointer; transition: transform .1s ease; }
+    .marker:focus, .marker:hover { outline:none; transform: scale(1.15); }
+    .side { background: var(--card); border:1px solid color-mix(in oklab, var(--muted) 20%, transparent); border-radius:16px; padding:14px; }
+
+    dialog { border:none; border-radius:16px; padding:0; max-width: 520px; width: calc(100% - 24px); box-shadow: var(--shadow); background: var(--panel); color: var(--text); }
+    .modal-head { display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border-bottom:1px solid color-mix(in oklab, var(--muted) 20%, transparent); }
+    .modal-body { padding: 16px; }
+    .close { background: transparent; border:none; font-size: 22px; color: var(--muted); cursor:pointer; }
+
+    /* Tips (Accordion) */
+    .accordion { display:grid; gap:10px; }
+    .acc-item { border:1px solid color-mix(in oklab, var(--muted) 22%, transparent); border-radius:14px; overflow:hidden; background: var(--card); }
+    .acc-btn { width:100%; text-align:left; background:transparent; border:none; padding:14px; font-weight:600; color:var(--text); display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+    .acc-panel { padding:0 14px 14px; color: var(--muted); display:none; }
+    .acc-item[open] .acc-panel { display:block; }
+
+    /* Resources */
+    .res { display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; }
+    .res a { display:block; text-decoration:none; color:var(--text); }
+    .res .card p { color:var(--muted); margin:8px 0 0; font-size:14px; }
+
+    /* Quiz */
+    .quiz { display:grid; gap:12px; }
+    .q { border:1px solid color-mix(in oklab, var(--muted) 22%, transparent); border-radius:14px; padding:14px; background: var(--card); }
+    .q h4 { margin:0 0 10px; }
+    .q label { display:block; margin-bottom:6px; cursor:pointer; }
+    .score { font-weight:800; }
+
+    /* Contact */
+    form { display:grid; gap:10px; }
+    input, textarea, select {
+      width:100%; padding:12px 12px; background: var(--panel); color: var(--text);
+      border: 1px solid color-mix(in oklab, var(--muted) 24%, transparent); border-radius:12px;
+    }
+    input:focus, textarea:focus, select:focus { outline:none; box-shadow: 0 0 0 3px var(--ring); }
+    .note { color: var(--muted); font-size: 12px; }
+
+    footer { padding: 36px 0; color: var(--muted); text-align:center; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .map-wrap { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .res { grid-template-columns: 1fr 1fr; }
+      .kpi { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .res { grid-template-columns: 1fr; }
+      .kpi { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <a class="brand" href="#home">
+          <span class="logo" aria-hidden="true"></span>
+          <span>NDRF Interactive</span>
+        </a>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#locator">Battalion Locator</a>
+          <a href="#tips">Safety Tips</a>
+          <a href="#resources">Resources</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="controls">
+          <button class="btn" id="themeToggle" title="Toggle theme" aria-pressed="false">Theme</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="pill" aria-label="Emergency ready">Be Ready • Stay Safe</span>
+          <h1>NDRF — National Disaster Response Force</h1>
+          <p>Explore the mission and preparedness guidance of India's premier disaster response force. Learn safety basics, locate battalions (sample data), and test yourself with a quick quiz.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <a href="#tips" class="btn">Start with Safety Tips</a>
+            <a href="#quiz" class="btn" style="background:linear-gradient(135deg, var(--brand-2), var(--brand));">Take the Quiz</a>
+          </div>
+        </div>
+        <div class="card" aria-hidden="true">
+          <svg viewBox="0 0 600 420" role="img" aria-label="Decorative waves">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="var(--brand-2)" stop-opacity=".35" />
+                <stop offset="100%" stop-color="var(--brand)" stop-opacity=".35" />
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#g1)" rx="18" />
+            <g fill="none" stroke="rgba(255,255,255,.35)">
+              <path d="M0 300 Q 120 260 220 300 T 600 300" />
+              <path d="M0 330 Q 160 290 260 330 T 600 330" />
+              <path d="M0 360 Q 200 320 300 360 T 600 360" />
+            </g>
+            <g>
+              <circle cx="120" cy="120" r="50" fill="rgba(255,255,255,.08)" />
+              <circle cx="240" cy="160" r="30" fill="rgba(255,255,255,.08)" />
+              <circle cx="420" cy="110" r="70" fill="rgba(255,255,255,.08)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2>About NDRF</h2>
+        <p class="sub">The National Disaster Response Force coordinates specialized response for natural and man‑made disasters across India — search and rescue, medical aid, logistics, and capacity building with communities and institutions.</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>What they do</h3>
+            <ul>
+              <li>Urban Search &amp; Rescue (collapsed structures, confined spaces)</li>
+              <li>Flood &amp; Cyclone response (swift‑water rescue, evacuation)</li>
+              <li>CBRN incident response (Chemical, Biological, Radiological, Nuclear)</li>
+              <li>Medical first response &amp; relief logistics</li>
+              <li>Community awareness &amp; joint mock drills</li>
+            </ul>
+            <div class="kpi">
+              <div class="item"><div class="num" id="kpiBattalions">16</div><div class="lbl">Battalions*</div></div>
+              <div class="item"><div class="num">24×7</div><div class="lbl">Operational</div></div>
+              <div class="item"><div class="num">All‑India</div><div class="lbl">Coverage</div></div>
+            </div>
+            <p class="note" style="margin-top:10px">*Sample figure shown. Replace with the latest official number if needed.</p>
+          </div>
+          <div class="card">
+            <h3>How to contact in an emergency</h3>
+            <ol>
+              <li>Dial local helplines: <strong>112 (ERSS)</strong>, <strong>100/101/102</strong> as applicable.</li>
+              <li>Follow your State/UT disaster management authority advisories.</li>
+              <li>Use verified channels for updates; avoid sharing rumours.</li>
+            </ol>
+            <p class="note">This site is an educational demo. For official information, consult government/NDMA/NDRF sources.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locator -->
+    <section id="locator">
+      <div class="container">
+        <h2>Battalion Locator (Sample Data)</h2>
+        <p class="sub">A schematic map with clickable markers. <strong>Edit the data array in the code</strong> to update names/contacts based on official sources.</p>
+        <div class="map-wrap">
+          <div class="map">
+            <!-- Schematic India-ish canvas (not to scale). Markers are placed relatively. -->
+            <svg viewBox="0 0 600 720" aria-labelledby="mapTitle mapDesc" role="img">
+              <title id="mapTitle">Schematic map for battalion markers</title>
+              <desc id="mapDesc">A simplified canvas with state-like contours and clickable dots that open details.</desc>
+              <defs>
+                <radialGradient id="bggrad" cx="50%" cy="40%" r="70%">
+                  <stop offset="0%" stop-color="rgba(37,99,235,.10)" />
+                  <stop offset="100%" stop-color="rgba(249,115,22,.06)" />
+                </radialGradient>
+              </defs>
+              <rect width="100%" height="100%" rx="22" fill="url(#bggrad)" />
+              <!-- Decorative landmass blobs -->
+              <path d="M90 520 C 110 470, 200 450, 260 430 C 330 410, 390 360, 420 310 C 450 260, 430 190, 360 160 C 290 130, 220 130, 170 180 C 130 220, 110 260, 110 320 C 110 400, 60 470, 90 520 Z" fill="rgba(255,255,255,.06)" />
+              <path d="M360 650 C 400 600, 470 570, 500 520 C 540 470, 520 420, 470 410 C 430 400, 400 420, 380 450 C 360 490, 320 520, 300 560 C 280 600, 300 640, 360 650 Z" fill="rgba(255,255,255,.05)" />
+
+              <!-- Markers injected by JS -->
+              <g id="markers"></g>
+            </svg>
+            <div class="legend" aria-hidden="true" style="margin-top:10px">
+              <span class="badge"><span class="dot"></span> Battalion (sample)</span>
+              <span class="badge">Click a dot for details</span>
+            </div>
+          </div>
+
+          <aside class="side" aria-live="polite">
+            <h3>Selected Battalion</h3>
+            <div id="details">
+              <p>Select a marker to view details.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips">
+      <div class="container">
+        <h2>Disaster Safety Tips</h2>
+        <p class="sub">Quick guidance for common hazards. Expand each item.</p>
+        <div class="accordion" id="accordion">
+          <div class="acc-item" open="">
+            <button class="acc-btn" aria-expanded="true">Floods <span>▾</span></button>
+            <div class="acc-panel">
+              <ul>
+                <li>Move to higher ground; avoid walking/driving through floodwaters.</li>
+                <li>Turn off electricity/gas if instructed; keep emergency kit ready.</li>
+                <li>After waters recede, avoid stagnant water and downed wires.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Cyclones &amp; Strong Winds <span>▾</span></button>
+            <div class="acc-panel">
+              <ul>
+                <li>Secure windows/doors; bring loose items indoors.</li>
+                <li>Stay away from glass; keep devices charged and a battery radio.</li>
+                <li>Heed evacuation orders; do not return until cleared.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Earthquakes <span>▾</span></button>
+            <div class="acc-panel">
+              <ul>
+                <li><strong>Drop, Cover, Hold On</strong> under sturdy furniture.</li>
+                <li>Stay indoors until shaking stops. If outside, move away from buildings.</li>
+                <li>Prepare a family plan and identify safe spots in each room.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Heatwaves <span>▾</span></button>
+            <div class="acc-panel">
+              <ul>
+                <li>Hydrate frequently; avoid strenuous activity in peak hours.</li>
+                <li>Never leave children/elderly/pets in parked vehicles.</li>
+                <li>Know the signs of heat exhaustion and heat stroke.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources">
+      <div class="container">
+        <h2>Resources (Placeholders)</h2>
+        <p class="sub">Replace with official links/documents as needed.</p>
+        <div class="res">
+          <a class="card" href="#" onclick="alert('Replace this with an official SOP/guide link.');return false;">
+            <h4>Family Emergency Kit Checklist (PDF)</h4>
+            <p>Printable checklist for essentials.</p>
+          </a>
+          <a class="card" href="#" onclick="alert('Replace this with an official alert/advisory link.');return false;">
+            <h4>Latest Weather/Advisories</h4>
+            <p>Official alerts during extreme events.</p>
+          </a>
+          <a class="card" href="#" onclick="alert('Replace with state disaster management portal.');return false;">
+            <h4>State/UT Disaster Management</h4>
+            <p>Know your local authority contacts.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz">
+      <div class="container">
+        <h2>Preparedness Quiz</h2>
+        <p class="sub">5 quick questions. No trick questions — just good practice.</p>
+        <div class="quiz" id="quizBox"></div>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <button class="btn" id="submitQuiz">Submit</button>
+          <button class="btn" id="resetQuiz" style="background:linear-gradient(135deg,var(--brand-2),var(--brand));">Reset</button>
+        </div>
+        <p id="quizResult" style="margin-top:10px"></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact / Feedback</h2>
+        <p class="sub">Have a suggestion or need to request an update? Send a message.</p>
+        <form id="contactForm" novalidate="">
+          <div class="grid grid-2">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" required="" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required="" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="grid grid-2">
+            <div>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required="">
+                <option value="">Choose one</option>
+                <option>Website feedback</option>
+                <option>Content update</option>
+                <option>Accessibility</option>
+              </select>
+            </div>
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" placeholder="+91‑XXXXXXXXXX" />
+            </div>
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" rows="5" required="" placeholder="Write your message..."></textarea>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <input type="checkbox" id="consent" required="" />
+            <label for="consent">I consent to having this message processed for a reply.</label>
+          </div>
+          <button class="btn" type="submit">Send</button>
+          <p class="note">This demo stores nothing; submission shows a success message on this page.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> NDRF Interactive Demo • Built as a single‑file site (HTML+CSS+JS)</p>
+      <p><a href="#home" class="btn" style="margin-top:8px; text-decoration:none;">Back to top</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <dialog id="modal">
+    <div class="modal-head">
+      <strong id="mTitle">Battalion</strong>
+      <button class="close" aria-label="Close" onclick="document.getElementById('modal').close()">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="mBody">Details go here.</div>
+    </div>
+  </dialog>
+
+  <script>
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    themeBtn.addEventListener('click', () => {
+      const isLight = root.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeBtn.setAttribute('aria-pressed', String(next === 'light'));
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accordion logic
+    document.querySelectorAll('.acc-item').forEach((item) => {
+      const btn = item.querySelector('.acc-btn');
+      btn.addEventListener('click', () => {
+        const open = item.hasAttribute('open');
+        document.querySelectorAll('.acc-item[open]').forEach((el)=> el.removeAttribute('open'));
+        if (!open) item.setAttribute('open','');
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+    });
+
+    // ===== Battalion Locator (Sample Data) =====
+    // Replace this array with official details as needed.
+    const battalions = [
+      { id: 'BN-01', name: '1st Battalion (Sample)', city: 'Guwahati', zone: 'NE', x: 430, y: 250, phone: '+91-0000000001' },
+      { id: 'BN-02', name: '2nd Battalion (Sample)', city: 'Kolkata', zone: 'E', x: 420, y: 300, phone: '+91-0000000002' },
+      { id: 'BN-03', name: '3rd Battalion (Sample)', city: 'Cuttack', zone: 'E', x: 400, y: 360, phone: '+91-0000000003' },
+      { id: 'BN-04', name: '4th Battalion (Sample)', city: 'Ghaziabad', zone: 'N', x: 310, y: 250, phone: '+91-0000000004' },
+      { id: 'BN-05', name: '5th Battalion (Sample)', city: 'Pune', zone: 'W', x: 250, y: 420, phone: '+91-0000000005' },
+      { id: 'BN-06', name: '6th Battalion (Sample)', city: 'Gandhinagar', zone: 'W', x: 210, y: 360, phone: '+91-0000000006' },
+      { id: 'BN-07', name: '7th Battalion (Sample)', city: 'Varanasi', zone: 'N', x: 350, y: 310, phone: '+91-0000000007' },
+      { id: 'BN-08', name: '8th Battalion (Sample)', city: 'Bhubaneswar', zone: 'E', x: 410, y: 380, phone: '+91-0000000008' },
+      { id: 'BN-09', name: '9th Battalion (Sample)', city: 'Patna', zone: 'N', x: 370, y: 290, phone: '+91-0000000009' },
+      { id: 'BN-10', name: '10th Battalion (Sample)', city: 'Ranchi', zone: 'E', x: 380, y: 330, phone: '+91-0000000010' },
+      { id: 'BN-11', name: '11th Battalion (Sample)', city: 'Bhatinda', zone: 'N', x: 260, y: 270, phone: '+91-0000000011' },
+      { id: 'BN-12', name: '12th Battalion (Sample)', city: 'Doimukh', zone: 'NE', x: 470, y: 210, phone: '+91-0000000012' },
+      { id: 'BN-13', name: '13th Battalion (Sample)', city: 'Itanagar', zone: 'NE', x: 480, y: 220, phone: '+91-0000000013' },
+      { id: 'BN-14', name: '14th Battalion (Sample)', city: 'Imphal', zone: 'NE', x: 470, y: 260, phone: '+91-0000000014' },
+      { id: 'BN-15', name: '15th Battalion (Sample)', city: 'Aizawl', zone: 'NE', x: 450, y: 260, phone: '+91-0000000015' },
+      { id: 'BN-16', name: '16th Battalion (Sample)', city: 'Bengaluru', zone: 'S', x: 300, y: 520, phone: '+91-0000000016' }
+    ];
+
+    const markerGroup = document.getElementById('markers');
+    const details = document.getElementById('details');
+    const modal = document.getElementById('modal');
+    const mTitle = document.getElementById('mTitle');
+    const mBody = document.getElementById('mBody');
+
+    function renderMarkers() {
+      markerGroup.innerHTML = '';
+      battalions.forEach((b) => {
+        const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+        g.setAttribute('tabindex', '0');
+        g.setAttribute('role', 'button');
+        g.setAttribute('aria-label', `${b.name} — ${b.city}`);
+        g.classList.add('marker');
+        g.addEventListener('click', ()=> selectBattalion(b));
+        g.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); selectBattalion(b);} });
+
+        const outer = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        outer.setAttribute('cx', b.x);
+        outer.setAttribute('cy', b.y);
+        outer.setAttribute('r', 7);
+        outer.setAttribute('fill', 'var(--brand-2)');
+        outer.setAttribute('opacity', '.9');
+
+        const inner = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        inner.setAttribute('cx', b.x);
+        inner.setAttribute('cy', b.y);
+        inner.setAttribute('r', 3);
+        inner.setAttribute('fill', '#fff');
+        inner.setAttribute('opacity', '.9');
+
+        const label = document.createElementNS('http://www.w3.org/2000/svg','text');
+        label.setAttribute('x', b.x + 10);
+        label.setAttribute('y', b.y - 10);
+        label.setAttribute('fill', 'currentColor');
+        label.setAttribute('font-size', '12');
+        label.textContent = b.city;
+
+        g.appendChild(outer); g.appendChild(inner); g.appendChild(label);
+        markerGroup.appendChild(g);
+      });
+    }
+
+    function selectBattalion(b) {
+      details.innerHTML = `
+        <div class="card">
+          <h4 style="margin:0 0 6px">${b.name}</h4>
+          <p style="margin:0">City: <strong>${b.city}</strong> • Zone: <strong>${b.zone}</strong></p>
+          <p style="margin:6px 0 0">Phone: <a href="tel:${b.phone}">${b.phone}</a></p>
+          <div style="display:flex; gap:8px; margin-top:10px">
+            <button class="btn" onclick='openModal(${JSON.stringify(JSON.stringify(b))})'>Open</button>
+            <button class="btn" style="background:linear-gradient(135deg,var(--brand-2),var(--brand));" onclick='navigator.clipboard.writeText("${b.name} — ${b.city} — ${b.phone}").then(()=>toast("Copied details to clipboard"))'>Copy</button>
+          </div>
+        </div>`;
+    }
+
+    function openModal(bStr) {
+      const b = JSON.parse(bStr);
+      mTitle.textContent = b.name;
+      mBody.innerHTML = `
+        <p><strong>City:</strong> ${b.city}</p>
+        <p><strong>Zone:</strong> ${b.zone}</p>
+        <p><strong>Contact:</strong> <a href="tel:${b.phone}">${b.phone}</a></p>
+        <p class="note">Replace entries with official details as required.</p>`;
+      if (typeof modal.showModal === 'function') modal.showModal();
+      else modal.setAttribute('open','');
+    }
+
+    renderMarkers();
+
+    // ===== Quiz =====
+    const quizData = [
+      { q: 'During an earthquake, the safest immediate action indoors is…',
+        a: ['Run outside immediately', 'Stand in a doorway', 'Drop, Cover, and Hold On'], correct: 2 },
+      { q: 'How deep can moving floodwater be to knock an adult off their feet?',
+        a: ['About 15 cm', 'About 45 cm', 'At least 1 metre'], correct: 0 },
+      { q: 'A basic emergency kit should contain which set?',
+        a: ['Fresh food only', 'Water, torch, first aid, radio, power bank', 'Blankets only'], correct: 1 },
+      { q: 'Best way to stay informed during a cyclone is…',
+        a: ['Social media rumours', 'Official advisories & radio updates', 'Ignore all alerts'], correct: 1 },
+      { q: 'Signs of heat stroke include…',
+        a: ['Cool moist skin', 'Confusion and very high body temperature', 'Sleepiness only'], correct: 1 },
+    ];
+
+    const quizBox = document.getElementById('quizBox');
+    function renderQuiz() {
+      quizBox.innerHTML = '';
+      quizData.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'q';
+        div.innerHTML = `<h4>Q${idx+1}. ${item.q}</h4>` +
+          item.a.map((opt, i) => `
+            <label>
+              <input type="radio" name="q${idx}" value="${i}" /> ${opt}
+            </label>`).join('');
+        quizBox.appendChild(div);
+      });
+    }
+    renderQuiz();
+
+    const submitBtn = document.getElementById('submitQuiz');
+    const resetBtn = document.getElementById('resetQuiz');
+    const result = document.getElementById('quizResult');
+
+    submitBtn.addEventListener('click', () => {
+      let score = 0; let attempted = 0;
+      quizData.forEach((item, idx) => {
+        const sel = document.querySelector(`input[name="q${idx}"]:checked`);
+        if (sel) { attempted++; if (Number(sel.value) === item.correct) score++; }
+      });
+      const pct = Math.round((score / quizData.length) * 100);
+      result.innerHTML = `<span class="score">${score}/${quizData.length}</span> correct (${pct}%). ${pct>=80? 'Great job — you\'re prepared!':'Keep learning — review the tips above.'}`;
+      toast('Quiz submitted');
+    });
+
+    resetBtn.addEventListener('click', () => { renderQuiz(); result.textContent = ''; toast('Quiz reset'); });
+
+    // ===== Contact Form (client-side demo) =====
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      if (!form.reportValidity()) return;
+      const data = Object.fromEntries(new FormData(form).entries());
+      console.log('Submitted (demo):', data);
+      toast('Message sent! (demo)');
+      form.reset();
+      document.getElementById('consent').checked = false;
+    });
+
+    // ===== Tiny Toast =====
+    const toast = (msg) => {
+      const t = document.createElement('div');
+      t.textContent = msg;
+      Object.assign(t.style, {
+        position: 'fixed', bottom: '18px', left: '50%', transform: 'translateX(-50%)',
+        background: 'linear-gradient(90deg, var(--brand-2), var(--brand))', color: '#fff',
+        padding: '10px 14px', borderRadius: '12px', boxShadow: 'var(--shadow)', zIndex: 1000,
+      });
+      document.body.appendChild(t);
+      setTimeout(()=> t.style.opacity = '0', 1800);
+      setTimeout(()=> t.remove(), 2300);
+    };
+  </script>
+</body>
+</html>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
