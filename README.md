@@ -139,6 +139,28 @@
 </header>
 
 <section class="hero" id="home">
+<div style="text-align: center; margin-top: 40px;">
+  <a href="game.html" 
+     style="
+       display: inline-block;
+       background: linear-gradient(135deg, #0288d1, #ff7043);
+       color: white;
+       padding: 14px 30px;
+       border-radius: 50px;
+       text-decoration: none;
+       font-size: 20px;
+       font-weight: bold;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+       transition: all 0.3s ease;
+     "
+     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 25px rgba(255,255,255,0.6)';" 
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+     🦺 Play Disaster Ready Challenge
+  </a>
+</div>
+
+
+  
   <div class="container hero-inner">
     <div>
       <span class="pill" aria-label="Emergency ready">Be Ready • Stay Safe</span>
